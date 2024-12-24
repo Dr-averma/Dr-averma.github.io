@@ -1,2 +1,3 @@
 # Dr-averma.github.io
-#Ph.D Scholar
+Ph.D Scholar
+##Education
