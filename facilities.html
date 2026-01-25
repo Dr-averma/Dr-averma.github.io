@@ -1,11 +1,12 @@
-<!-- Add below your main section or footer -->
 <section class="max-w-7xl mx-auto px-6 mb-24">
   <div class="flex items-center gap-4 mb-6">
     <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
     <h2 class="text-3xl font-bold italic">Visitors Around the World</h2>
   </div>
-  
-  <div id="world-map" class="w-full h-[500px] rounded-xl shadow-lg"></div>
+
+  <div class="rounded-xl shadow-lg overflow-hidden h-[500px]">
+    <div id="world-map" class="w-full h-full"></div>
+  </div>
 </section>
 
 <!-- Leaflet JS + CSS -->
@@ -13,16 +14,16 @@
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 <script>
-  // Initialize map
-  var map = L.map('world-map').setView([20, 0], 2);
+  // Initialize the map
+  var map = L.map('world-map').setView([20, 0], 2); // Centered on world
 
-  // Add base tiles
+  // Add OpenStreetMap tiles
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors',
     maxZoom: 5,
-    attribution: '© OpenStreetMap'
   }).addTo(map);
 
-  // Example visitor locations (lat, lon)
+  // Example visitor locations
   var visitors = [
     {lat: 28.6139, lon: 77.2090, city: "New Delhi, India"},
     {lat: 40.7128, lon: -74.0060, city: "New York, USA"},
@@ -42,4 +43,3 @@
     }).addTo(map).bindPopup(v.city);
   });
 </script>
-
