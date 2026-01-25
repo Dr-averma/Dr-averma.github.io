@@ -1,23 +1,128 @@
-<main class="max-w-6xl mx-auto px-6 py-12">
-    <h1 class="text-4xl font-bold text-center mb-16 text-slate-800">Research Team</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMWM | Research Team</title>
 
-    <section class="mb-20">
-        <h2 class="text-xl font-bold uppercase tracking-widest text-blue-600 border-b-2 border-blue-100 pb-2 mb-10 text-center">Principal Investigator</h2>
-        <div class="flex flex-col items-center">
-            <img src="assets/dr_shuvajit.jpg" alt="Dr. Shuvajit Mukherjee" class="w-56 h-64 object-cover rounded-xl shadow-lg mb-4">
-            <h3 class="text-2xl font-bold">Dr. Shuvajit Mukherjee</h3>
-            <p class="text-slate-500">Assistant Professor</p>
-        </div>
-    </section>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <section>
-        <h2 class="text-xl font-bold uppercase tracking-widest text-blue-600 border-b-2 border-blue-100 pb-2 mb-10 text-center">PhD Students</h2>
-        <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
-            <div class="flex flex-col items-center">
-                <img src="assets/akash.jpg" alt="Akash Verma" class="w-48 h-56 object-cover rounded-xl shadow-md mb-4">
-                <h3 class="text-xl font-bold">Akash Verma</h3>
-                <p class="text-sm text-center text-slate-500 px-4">Research topic: Tunable Wave Propagation by Novel Metamaterial Lattice</p>
-            </div>
-            </div>
-    </section>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-gradient {
+      background: radial-gradient(circle at top, #064e3b 0%, #020617 60%);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="bg-white/80 backdrop-blur shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="assets/logo_AMWM.png" alt="AMWM Logo" class="h-12">
+      <span class="font-extrabold text-xl tracking-tight">AMWM</span>
+    </div>
+
+    <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide">
+      <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+      <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+      <a href="publications.html" class="hover:text-blue-600 transition">Publications</a>
+      <a href="team.html" class="text-blue-600">Team</a>
+      <a href="facilities.html" class="hover:text-blue-600 transition">Facilities</a>
+      <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero-gradient py-24 text-white">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Research Team</h1>
+    <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto">
+      Researchers and students driving innovation in advanced materials and wave mechanics.
+    </p>
+  </div>
+</header>
+
+<!-- ================= TEAM ================= -->
+<main class="bg-slate-50">
+
+  <!-- PI -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+
+    <div class="flex items-center gap-4 mb-16">
+      <div class="h-12 w-1.5 bg-blue-600 rounded-full"></div>
+      <h2 class="text-3xl font-bold">Principal Investigator</h2>
+    </div>
+
+    <div class="flex justify-center">
+      <div class="bg-white p-10 rounded-2xl shadow-xl border border-slate-100 text-center max-w-xl hover:shadow-2xl transition">
+
+        <img src="assets/dr_shuvajit.jpg"
+             alt="Dr. Shuvajit Mukherjee"
+             class="w-64 h-72 object-cover rounded-2xl shadow-lg mx-auto mb-6">
+
+        <h3 class="text-2xl font-bold">Dr. Shuvajit Mukherjee</h3>
+        <p class="text-blue-600 font-semibold mt-1">Assistant Professor</p>
+        <p class="text-slate-500 mt-2">Principal Investigator, AMWM Lab</p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PhD Students -->
+  <section class="max-w-7xl mx-auto px-6 pb-28">
+
+    <div class="flex items-center gap-4 mb-16">
+      <div class="h-12 w-1.5 bg-blue-600 rounded-full"></div>
+      <h2 class="text-3xl font-bold">PhD Researchers</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
+
+      <!-- Student -->
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl transition text-center">
+
+        <img src="assets/akash.jpg"
+             alt="Akash Verma"
+             class="w-52 h-60 object-cover rounded-xl shadow-md mx-auto mb-5">
+
+        <h3 class="text-xl font-bold">Akash Verma</h3>
+
+        <p class="text-slate-500 text-sm mt-2">
+          Tunable wave propagation in novel metamaterial lattices.
+        </p>
+
+      </div>
+
+      <!-- Future students here -->
+
+    </div>
+  </section>
 </main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-slate-900 text-slate-300 py-14">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+
+    <div>
+      <h3 class="text-xl font-bold text-white mb-2">AMWM Laboratory</h3>
+      <p class="text-sm text-slate-400">
+        Advanced Materials & Wave Mechanics Laboratory <br>
+        Research • Innovation • Education
+      </p>
+    </div>
+
+    <div class="md:text-right text-sm text-slate-400">
+      © 2026 AMWM Lab. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
