@@ -1,128 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AMWM | Research Team</title>
+<!-- ================= TEAM SECTION ================= -->
+<section id="team" class="py-24 bg-gradient-to-b from-slate-950 to-slate-900 text-white">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <div class="max-w-7xl mx-auto px-6">
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-  <style>
-    body { font-family: 'Inter', sans-serif; }
-    .hero-gradient {
-      background: radial-gradient(circle at top, #064e3b 0%, #020617 60%);
-    }
-  </style>
-</head>
-
-<body class="bg-white text-slate-800">
-
-<!-- ================= NAVBAR ================= -->
-<nav class="bg-white/80 backdrop-blur shadow-sm sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <img src="assets/logo_AMWM.png" alt="AMWM Logo" class="h-12">
-      <span class="font-extrabold text-xl tracking-tight">AMWM</span>
-    </div>
-
-    <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide">
-      <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-      <a href="research.html" class="hover:text-blue-600 transition">Research</a>
-      <a href="publications.html" class="hover:text-blue-600 transition">Publications</a>
-      <a href="team.html" class="text-blue-600">Team</a>
-      <a href="facilities.html" class="hover:text-blue-600 transition">Facilities</a>
-      <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<!-- ================= HERO ================= -->
-<header class="hero-gradient py-24 text-white">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Research Team</h1>
-    <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto">
-      Researchers and students driving innovation in advanced materials and wave mechanics.
-    </p>
-  </div>
-</header>
-
-<!-- ================= TEAM ================= -->
-<main class="bg-slate-50">
-
-  <!-- PI -->
-  <section class="max-w-7xl mx-auto px-6 py-24">
-
-    <div class="flex items-center gap-4 mb-16">
-      <div class="h-12 w-1.5 bg-blue-600 rounded-full"></div>
-      <h2 class="text-3xl font-bold">Principal Investigator</h2>
-    </div>
-
-    <div class="flex justify-center">
-      <div class="bg-white p-10 rounded-2xl shadow-xl border border-slate-100 text-center max-w-xl hover:shadow-2xl transition">
-
-        <img src="assets/dr_shuvajit.jpg"
-             alt="Dr. Shuvajit Mukherjee"
-             class="w-64 h-72 object-cover rounded-2xl shadow-lg mx-auto mb-6">
-
-        <h3 class="text-2xl font-bold">Dr. Shuvajit Mukherjee</h3>
-        <p class="text-blue-600 font-semibold mt-1">Assistant Professor</p>
-        <p class="text-slate-500 mt-2">Principal Investigator, AMWM Lab</p>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PhD Students -->
-  <section class="max-w-7xl mx-auto px-6 pb-28">
-
-    <div class="flex items-center gap-4 mb-16">
-      <div class="h-12 w-1.5 bg-blue-600 rounded-full"></div>
-      <h2 class="text-3xl font-bold">PhD Researchers</h2>
-    </div>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-12">
-
-      <!-- Student -->
-      <div class="bg-white p-8 rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl transition text-center">
-
-        <img src="assets/akash.jpg"
-             alt="Akash Verma"
-             class="w-52 h-60 object-cover rounded-xl shadow-md mx-auto mb-5">
-
-        <h3 class="text-xl font-bold">Akash Verma</h3>
-
-        <p class="text-slate-500 text-sm mt-2">
-          Tunable wave propagation in novel metamaterial lattices.
-        </p>
-
-      </div>
-
-      <!-- Future students here -->
-
-    </div>
-  </section>
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="bg-slate-900 text-slate-300 py-14">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
-
-    <div>
-      <h3 class="text-xl font-bold text-white mb-2">AMWM Laboratory</h3>
-      <p class="text-sm text-slate-400">
-        Advanced Materials & Wave Mechanics Laboratory <br>
-        Research • Innovation • Education
+    <!-- Section heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-extrabold tracking-wide">Our Team</h2>
+      <p class="mt-4 text-slate-400 max-w-2xl mx-auto">
+        Meet the researchers working on architected materials, wave propagation,
+        and advanced computational mechanics.
       </p>
     </div>
 
-    <div class="md:text-right text-sm text-slate-400">
-      © 2026 AMWM Lab. All rights reserved.
+    <!-- Team grid -->
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- ================= CARD 1 ================= -->
+      <div class="relative group w-full max-w-sm mx-auto overflow-hidden rounded-2xl bg-white text-black shadow-xl">
+
+        <!-- Front -->
+        <div class="relative z-10 transition-transform duration-500 group-hover:-translate-x-full p-8 text-center bg-white">
+
+          <img src="assets/akash.jpg"
+               alt="Akash Verma"
+               class="w-52 h-60 object-cover rounded-xl shadow-md mx-auto mb-5">
+
+          <h3 class="text-xl font-bold">Akash Verma</h3>
+          <p class="text-slate-500 text-sm mt-2">PhD Researcher</p>
+        </div>
+
+        <!-- Back -->
+        <div class="absolute inset-0 translate-x-full group-hover:translate-x-0 transition-transform duration-500 bg-gradient-to-br from-slate-900 to-slate-800 text-white p-8 flex flex-col justify-center">
+
+          <h3 class="text-xl font-bold mb-3">Akash Verma</h3>
+
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Researching bandgap formation, architected metamaterials,
+            Bloch wave analysis, and phase-field based damage modeling.
+          </p>
+
+          <div class="text-sm space-y-2 mb-5">
+            <p><span class="text-slate-400">Focus:</span> Metamaterials, Phononics</p>
+            <p><span class="text-slate-400">Tools:</span> FEniCS, COMSOL, Python</p>
+          </div>
+
+          <div class="flex gap-5 text-sm font-semibold">
+            <a href="#" class="hover:text-blue-400 transition">Profile</a>
+            <a href="#" class="hover:text-blue-400 transition">Google Scholar</a>
+            <a href="mailto:akash@example.com" class="hover:text-blue-400 transition">Email</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CARD 2 ================= -->
+      <div class="relative group w-full max-w-sm mx-auto overflow-hidden rounded-2xl bg-white text-black shadow-xl">
+
+        <div class="relative z-10 transition-transform duration-500 group-hover:-translate-x-full p-8 text-center bg-white">
+          <img src="assets/member2.jpg"
+               class="w-52 h-60 object-cover rounded-xl shadow-md mx-auto mb-5">
+          <h3 class="text-xl font-bold">Dr. Xxxxx Yyyyy</h3>
+          <p class="text-slate-500 text-sm mt-2">Principal Investigator</p>
+        </div>
+
+        <div class="absolute inset-0 translate-x-full group-hover:translate-x-0 transition-transform duration-500 bg-gradient-to-br from-slate-900 to-slate-800 text-white p-8 flex flex-col justify-center">
+
+          <h3 class="text-xl font-bold mb-3">Dr. Xxxxx Yyyyy</h3>
+
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Leads research in smart materials, structural dynamics,
+            and multiscale computational mechanics.
+          </p>
+
+          <div class="text-sm space-y-2 mb-5">
+            <p><span class="text-slate-400">Area:</span> Smart structures</p>
+            <p><span class="text-slate-400">Experience:</span> FEM, Multiphysics</p>
+          </div>
+
+          <div class="flex gap-5 text-sm font-semibold">
+            <a href="#" class="hover:text-blue-400 transition">Profile</a>
+            <a href="#" class="hover:text-blue-400 transition">Publications</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= CARD 3 ================= -->
+      <div class="relative group w-full max-w-sm mx-auto overflow-hidden rounded-2xl bg-white text-black shadow-xl">
+
+        <div class="relative z-10 transition-transform duration-500 group-hover:-translate-x-full p-8 text-center bg-white">
+          <img src="assets/member3.jpg"
+               class="w-52 h-60 object-cover rounded-xl shadow-md mx-auto mb-5">
+          <h3 class="text-xl font-bold">M.S. Student</h3>
+          <p class="text-slate-500 text-sm mt-2">Graduate Researcher</p>
+        </div>
+
+        <div class="absolute inset-0 translate-x-full group-hover:translate-x-0 transition-transform duration-500 bg-gradient-to-br from-slate-900 to-slate-800 text-white p-8 flex flex-col justify-center">
+
+          <h3 class="text-xl font-bold mb-3">M.S. Student</h3>
+
+          <p class="text-sm text-slate-300 leading-relaxed mb-4">
+            Working on numerical homogenization and dynamic response
+            of periodic lattice structures.
+          </p>
+
+          <div class="text-sm space-y-2 mb-5">
+            <p><span class="text-slate-400">Focus:</span> Homogenization</p>
+            <p><span class="text-slate-400">Tools:</span> MATLAB, Python</p>
+          </div>
+
+          <div class="flex gap-5 text-sm font-semibold">
+            <a href="#" class="hover:text-blue-400 transition">Profile</a>
+            <a href="#" class="hover:text-blue-400 transition">Email</a>
+          </div>
+        </div>
+      </div>
+
     </div>
-
   </div>
-</footer>
-
-</body>
-</html>
+</section>
