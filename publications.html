@@ -1,59 +1,81 @@
-<!-- ================= PUBLICATIONS PAGE ================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AMWM | Publications</title>
 
-<!-- Hero -->
-<section class="hero-gradient text-white py-24">
-  <div class="max-w-6xl mx-auto px-6">
-    <h1 class="text-5xl font-extrabold mb-4">Publications</h1>
-    <p class="text-slate-300 max-w-3xl text-lg">
-      Research outputs of the Advanced Materials & Wave Mechanics Laboratory covering metamaterials, 
-      wave mechanics, and computational modeling.
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-gradient {
+      background: radial-gradient(circle at top, #064e3b 0%, #020617 60%);
+    }
+  </style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="bg-white/80 backdrop-blur shadow-sm sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="assets/logo_AMWM.png" alt="AMWM Logo" class="h-12">
+      <span class="font-extrabold text-xl tracking-tight">AMWM</span>
+    </div>
+
+    <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide">
+      <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+      <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+      <a href="publications.html" class="text-blue-600">Publications</a>
+      <a href="team.html" class="hover:text-blue-600 transition">Team</a>
+      <a href="facilities.html" class="hover:text-blue-600 transition">Facilities</a>
+      <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero-gradient py-24 text-white">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Publications</h1>
+
+    <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto">
+      Peer-reviewed research contributions of the Advanced Materials & Wave Mechanics Laboratory in metamaterials, wave mechanics, and computational modeling.
     </p>
-  </div>
-</section>
 
-<!-- Stats -->
-<section class="bg-white border-b">
-  <div class="max-w-6xl mx-auto px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-    <div>
-      <p class="text-3xl font-extrabold text-blue-600">25+</p>
-      <p class="text-sm text-slate-500">Journal Papers</p>
-    </div>
-    <div>
-      <p class="text-3xl font-extrabold text-blue-600">12+</p>
-      <p class="text-sm text-slate-500">Conference Papers</p>
-    </div>
-    <div>
-      <p class="text-3xl font-extrabold text-blue-600">6</p>
-      <p class="text-sm text-slate-500">PhD Theses</p>
-    </div>
-    <div>
-      <p class="text-3xl font-extrabold text-blue-600">2019–2026</p>
-      <p class="text-sm text-slate-500">Years</p>
-    </div>
   </div>
-</section>
+</header>
 
-<!-- Main Publications -->
+<!-- ================= PUBLICATIONS ================= -->
 <main class="bg-slate-50">
-  <section class="max-w-6xl mx-auto px-6 py-24">
+  <section class="max-w-7xl mx-auto px-6 py-24">
 
-    <div class="flex items-center gap-4 mb-12">
+    <div class="flex items-center gap-4 mb-14">
       <div class="h-12 w-1.5 bg-blue-600 rounded-full"></div>
-      <h2 class="text-3xl font-extrabold">Journal Articles</h2>
+      <h2 class="text-3xl font-bold">Journal Articles</h2>
     </div>
 
-    <div class="grid gap-8">
+    <div class="grid gap-10">
 
       <!-- Paper -->
-      <article class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 border border-slate-100">
-        <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
+      <article class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 hover:shadow-2xl transition">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
           <span class="text-sm font-bold text-blue-600 bg-blue-50 px-4 py-1 rounded-full">
             2025 · Journal Article
           </span>
-          <span class="italic text-slate-500 text-sm">Journal of Sound and Vibration</span>
+          <span class="italic text-slate-500 text-sm">
+            Journal of Sound and Vibration
+          </span>
         </div>
 
-        <h3 class="text-xl font-bold mb-3">
+        <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug">
           Harnessing von Kármán nonlinearity for load-adaptive metadampers
         </h3>
 
@@ -69,15 +91,17 @@
       </article>
 
       <!-- Paper -->
-      <article class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition p-8 border border-slate-100">
-        <div class="flex flex-wrap justify-between items-center gap-4 mb-4">
+      <article class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100 hover:shadow-2xl transition">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
           <span class="text-sm font-bold text-blue-600 bg-blue-50 px-4 py-1 rounded-full">
             2023 · Journal Article
           </span>
-          <span class="italic text-slate-500 text-sm">Composite Structures</span>
+          <span class="italic text-slate-500 text-sm">
+            Composite Structures
+          </span>
         </div>
 
-        <h3 class="text-xl font-bold mb-3">
+        <h3 class="text-xl font-bold text-slate-900 mb-3 leading-snug">
           The mechanics and optimal design of micro-architected stepped hexagonal lattices
         </h3>
 
@@ -94,3 +118,25 @@
     </div>
   </section>
 </main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-slate-900 text-slate-300 py-14">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
+
+    <div>
+      <h3 class="text-xl font-bold text-white mb-2">AMWM Laboratory</h3>
+      <p class="text-sm text-slate-400">
+        Advanced Materials & Wave Mechanics Laboratory <br>
+        Research • Innovation • Education
+      </p>
+    </div>
+
+    <div class="md:text-right text-sm text-slate-400">
+      © 2026 AMWM Lab. All rights reserved.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
