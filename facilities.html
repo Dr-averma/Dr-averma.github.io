@@ -1,1 +1,45 @@
+<!-- Add below your main section or footer -->
+<section class="max-w-7xl mx-auto px-6 mb-24">
+  <div class="flex items-center gap-4 mb-6">
+    <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
+    <h2 class="text-3xl font-bold italic">Visitors Around the World</h2>
+  </div>
+  
+  <div id="world-map" class="w-full h-[500px] rounded-xl shadow-lg"></div>
+</section>
+
+<!-- Leaflet JS + CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+  // Initialize map
+  var map = L.map('world-map').setView([20, 0], 2);
+
+  // Add base tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 5,
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
+
+  // Example visitor locations (lat, lon)
+  var visitors = [
+    {lat: 28.6139, lon: 77.2090, city: "New Delhi, India"},
+    {lat: 40.7128, lon: -74.0060, city: "New York, USA"},
+    {lat: 51.5074, lon: -0.1278, city: "London, UK"},
+    {lat: 35.6895, lon: 139.6917, city: "Tokyo, Japan"}
+  ];
+
+  // Add markers
+  visitors.forEach(v => {
+    L.circleMarker([v.lat, v.lon], {
+      radius: 6,
+      fillColor: "#3b82f6",
+      color: "#1e40af",
+      weight: 1,
+      opacity: 1,
+      fillOpacity: 0.7
+    }).addTo(map).bindPopup(v.city);
+  });
+</script>
 
