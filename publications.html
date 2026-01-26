@@ -14,6 +14,12 @@
     .hero-gradient {
       background: radial-gradient(circle at top, #064e3b 0%, #020617 60%);
     }
+    .stats-card {
+      transition: transform 0.3s ease;
+    }
+    .stats-card:hover {
+      transform: translateY(-5px);
+    }
   </style>
 </head>
 
@@ -41,13 +47,30 @@
   <div class="max-w-5xl mx-auto px-6 text-center">
     <h1 class="text-5xl md:text-6xl font-extrabold mb-6">Publications</h1>
     <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto">
-      Peer-reviewed research contributions of the Advanced Materials & Wave Mechanics Laboratory in metamaterials, wave mechanics, and computational modeling.
+      Peer-reviewed research contributions of the Advanced Materials & Wave Mechanics Laboratory.
     </p>
   </div>
 </header>
 
-<main class="bg-slate-50 min-h-screen pb-24">
-  <section class="max-w-7xl mx-auto px-6 py-16">
+<section class="max-w-7xl mx-auto px-6 -mt-12 mb-16 relative z-10">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div class="stats-card bg-white p-8 rounded-2xl shadow-xl border border-slate-100 flex flex-col items-center text-center">
+      <span class="text-4xl font-extrabold text-blue-600 mb-2">17</span>
+      <span class="text-slate-500 uppercase tracking-widest text-xs font-bold">Total Publications</span>
+    </div>
+    <div class="stats-card bg-white p-8 rounded-2xl shadow-xl border border-slate-100 flex flex-col items-center text-center">
+      <span class="text-4xl font-extrabold text-slate-900 mb-2">16</span>
+      <span class="text-slate-500 uppercase tracking-widest text-xs font-bold">Journal Articles</span>
+    </div>
+    <div class="stats-card bg-white p-8 rounded-2xl shadow-xl border border-slate-100 flex flex-col items-center text-center">
+      <span class="text-4xl font-extrabold text-emerald-600 mb-2">1</span>
+      <span class="text-slate-500 uppercase tracking-widest text-xs font-bold">Conference Papers</span>
+    </div>
+  </div>
+</section>
+
+<main class="bg-slate-50 pb-24">
+  <section class="max-w-7xl mx-auto px-6 py-8">
 
     <div class="flex items-center gap-4 mb-10">
       <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
@@ -56,123 +79,211 @@
 
     <div class="grid gap-6">
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2025</span>
           <span class="italic text-slate-500 text-sm">Journal of Sound and Vibration</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">Harnessing von Kármán nonlinearity for load-adaptive metadampers</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Harnessing von Kármán nonlinearity for load-adaptive metadampers</h3>
         <p class="text-slate-600 text-sm mb-4">Sinha, R., Mukherjee, S., Adhikari, S., & Sarkar, S.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1016/j.jsv.2025.119496" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1016/j.jsv.2025.119496" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2024</span>
           <span class="italic text-slate-500 text-sm">Composite Structures</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">Tailoring band gap properties of curved hexagonal lattices with nodal cantilevers</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Tailoring band gap properties of curved hexagonal lattices with nodal cantilevers</h3>
         <p class="text-slate-600 text-sm mb-4">Mukherjee, S., Maeder, M., Cajic, M., Kronowetter, F., Adhikari, S., & Marburg, S.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1016/j.compstruct.2024.118342" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1016/j.compstruct.2024.118342" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2023</span>
           <span class="italic text-slate-500 text-sm">Composite Structures</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">The mechanics and optimal design of micro-architectured stepped hexagonal lattices</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">The mechanics and optimal design of micro-architectured stepped hexagonal lattices</h3>
         <p class="text-slate-600 text-sm mb-4">Mukherjee, S., & Adhikari, S.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1016/j.compstruct.2022.116900" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1016/j.compstruct.2022.116900" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2023</span>
           <span class="italic text-slate-500 text-sm">Composite Structures</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">Enhancement of band-gap characteristics in hexagonal and re-entrant lattices via curved beams</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Enhancement of band-gap characteristics in hexagonal and re-entrant lattices via curved beams</h3>
         <p class="text-slate-600 text-sm mb-4">Mukherjee, S., Cajic, M., Karlicic, D., & Adhikari, S.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1016/j.compstruct.2022.116591" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1016/j.compstruct.2022.116591" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2022</span>
           <span class="italic text-slate-500 text-sm">Engineering with Computers</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">Unfolding the mechanical properties of buckypaper composites: nano-to macro-scale coupled atomistic-continuum simulations</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Unfolding the mechanical properties of buckypaper composites: nano-to macro-scale coupled atomistic-continuum simulations</h3>
         <p class="text-slate-600 text-sm mb-4">Chandra, Y., Adhikari, S., Mukherjee, S., & Mukhopadhyay, T.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1007/s00366-021-01538-w" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1007/s00366-021-01538-w" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2022</span>
           <span class="italic text-slate-500 text-sm">Probabilistic Engineering Mechanics</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">The exact element stiffness matrices of stochastically parametered beams</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">The exact element stiffness matrices of stochastically parametered beams</h3>
         <p class="text-slate-600 text-sm mb-4">Adhikari, S., & Mukherjee, S.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1016/j.probengmech.2022.103317" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1016/j.probengmech.2022.103317" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+          <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2022</span>
+          <span class="italic text-slate-500 text-sm">Mechanics of Advanced Materials and Structures</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Stochastic strain and stress computation of a higher-order sandwich beam</h3>
+        <p class="text-slate-600 text-sm mb-4">Sharma, H., Mukherjee, S., & Ganguli, R.</p>
+        <div class="flex gap-4 text-xs font-bold">
+          <a href="https://doi.org/10.1080/15376494.2020.1810459" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
+        </div>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2022</span>
           <span class="italic text-slate-500 text-sm">Composite Structures</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">The in-plane mechanics of a family of curved 2D lattices</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">The in-plane mechanics of a family of curved 2D lattices</h3>
         <p class="text-slate-600 text-sm mb-4">Mukherjee, S., & Adhikari, S.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1016/j.compstruct.2021.114859" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1016/j.compstruct.2021.114859" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2021</span>
           <span class="italic text-slate-500 text-sm">Thin-Walled Structures</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">A general analytical framework for the mechanics of heterogeneous hexagonal lattices</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">A general analytical framework for the mechanics of heterogeneous hexagonal lattices</h3>
         <p class="text-slate-600 text-sm mb-4">Mukherjee, S., & Adhikari, S.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1016/j.tws.2021.108188" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1016/j.tws.2021.108188" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2021</span>
           <span class="italic text-slate-500 text-sm">Acta Mechanica</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">Time domain spectral element-based wave finite element method for periodic structures</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Time domain spectral element-based wave finite element method</h3>
         <p class="text-slate-600 text-sm mb-4">Mukherjee, S., Gopalakrishnan, S., & Ganguli, R.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1007/s00707-021-02922-7" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1007/s00707-021-02922-7" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2020</span>
           <span class="italic text-slate-500 text-sm">Journal of Sandwich Structures & Materials</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">Static and dynamic analysis of sandwich panel with spatially varying non-Gaussian properties</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Static and dynamic analysis of sandwich panel with non-Gaussian properties</h3>
         <p class="text-slate-600 text-sm mb-4">Mukherjee, S., Sekhar, B.R., Gopalakrishnan, S., & Ganguli, R.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.1177/1099636218812850" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.1177/1099636218812850" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
+        </div>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+          <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2020</span>
+          <span class="italic text-slate-500 text-sm">Int. J. for Comp. Methods in Eng. Science</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Uncertainty analysis of higher-order sandwich beam</h3>
+        <p class="text-slate-600 text-sm mb-4">Sharma, H., Mukherjee, S., & Ganguli, R.</p>
+        <div class="flex gap-4 text-xs font-bold">
+          <a href="https://doi.org/10.1080/15502287.2020.1774717" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
+        </div>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+          <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2020</span>
+          <span class="italic text-slate-500 text-sm">Neural Computing and Applications</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Optimal design of damage tolerant composite using enhanced bat algorithm</h3>
+        <p class="text-slate-600 text-sm mb-4">Reddy, M.P., Mukherjee, S., & Ganguli, R.</p>
+        <div class="flex gap-4 text-xs font-bold">
+          <a href="https://doi.org/10.1007/s00521-019-04280-z" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
+        </div>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+          <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2019</span>
+          <span class="italic text-slate-500 text-sm">Acta Mechanica</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Stochastic time domain spectral element analysis of beam structures</h3>
+        <p class="text-slate-600 text-sm mb-4">Mukherjee, S., Gopalakrishnan, S., & Ganguli, R.</p>
+        <div class="flex gap-4 text-xs font-bold">
+          <a href="https://doi.org/10.1007/s00707-018-2348-z" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
+        </div>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+          <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2019</span>
+          <span class="italic text-slate-500 text-sm">Mechanics of Advanced Materials and Structures</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Optimization of laminated composite structure considering uncertainty effects</h3>
+        <p class="text-slate-600 text-sm mb-4">Mukherjee, S., Ganguli, R., & Gopalakrishnan, S.</p>
+        <div class="flex gap-4 text-xs font-bold">
+          <a href="https://doi.org/10.1080/15376494.2017.1315639" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
+        </div>
+      </article>
+
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-blue-300 transition group">
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
+          <span class="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full uppercase">2018</span>
+          <span class="italic text-slate-500 text-sm">Int. J. for Comp. Methods in Eng. Science</span>
+        </div>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-blue-700 transition">Ply level uncertainty effects on failure curves of laminated composites</h3>
+        <p class="text-slate-600 text-sm mb-4">Mukherjee, S., Reddy, M.P., Ganguli, R., & Gopalakrishnan, S.</p>
+        <div class="flex gap-4 text-xs font-bold">
+          <a href="https://doi.org/10.1080/15502287.2018.1473455" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-blue-600 uppercase">BibTeX</button>
         </div>
       </article>
 
@@ -184,15 +295,16 @@
     </div>
 
     <div class="grid gap-6">
-      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-emerald-300 transition">
+      <article class="bg-white p-6 rounded-xl shadow-sm border border-slate-200 hover:border-emerald-300 transition group">
         <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
           <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full uppercase">2025</span>
           <span class="italic text-slate-500 text-sm">AIAA SCITECH 2025 Forum</span>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-2">Homogenised In-Plane Elastic Properties of Randomly Irregular 2D Lattices</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-2 group-hover:text-emerald-700 transition">Homogenised In-Plane Elastic Properties of Randomly Irregular 2D Lattices</h3>
         <p class="text-slate-600 text-sm mb-4">Adhikari, S., & Mukherjee, S.</p>
         <div class="flex gap-4 text-xs font-bold">
-          <a href="https://doi.org/10.2514/6.2025-0583" target="_blank" class="text-blue-600 hover:text-blue-800">DOI</a>
+          <a href="https://doi.org/10.2514/6.2025-0583" target="_blank" class="text-blue-600 hover:underline">DOI</a>
+          <button class="text-slate-400 hover:text-emerald-600 uppercase">BibTeX</button>
         </div>
       </article>
     </div>
@@ -204,10 +316,7 @@
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 items-center">
     <div>
       <h3 class="text-xl font-bold text-white mb-2">AMWM Laboratory</h3>
-      <p class="text-sm text-slate-400">
-        Advanced Materials & Wave Mechanics Laboratory <br>
-        Research • Innovation • Education
-      </p>
+      <p class="text-sm text-slate-400">Advanced Materials & Wave Mechanics Laboratory<br>Research • Innovation • Education</p>
     </div>
     <div class="md:text-right text-sm text-slate-400">
       © 2026 AMWM Lab. All rights reserved.
