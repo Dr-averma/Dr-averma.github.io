@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>AMWM | Contact</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body { font-family: 'Inter', sans-serif; }
+
+.hero-gradient {
+  background: radial-gradient(circle at top, #064e3b 0%, #020617 65%);
+}
+
+.contact-card {
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container {
+  filter: grayscale(100%) invert(90%) contrast(90%);
+  transition: filter 0.5s ease;
+}
+
+.map-container:hover {
+  filter: grayscale(0%) invert(0%) contrast(100%);
+}
+</style>
+</head>
+
+<body class="bg-white text-slate-800">
+
+<nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-slate-100">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="assets/logo_AMWM.png" alt="AMWM Logo" class="h-11">
+      <span class="font-extrabold text-xl tracking-tight">AMWM</span>
+    </div>
+
+    <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide">
+      <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+      <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+      <a href="publications.html" class="hover:text-blue-600 transition">Publications</a>
+      <a href="team.html" class="hover:text-blue-600 transition">Team</a>
+      <a href="facilities.html" class="hover:text-blue-600 transition">Facilities</a>
+      <a href="contact.html" class="text-blue-600">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero-gradient py-28 text-white">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
+      Get in Touch
+    </h1>
+    <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+      Have questions about our research or interested in collaboration? We’d love to hear from you.
+    </p>
+  </div>
+</header>
+
+<main class="bg-slate-50 py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+      
+      <div class="space-y-12">
+        <div>
+          <div class="flex items-center gap-4 mb-8">
+            <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
+            <h2 class="text-3xl font-bold">Contact Details</h2>
+          </div>
+          
+          <div class="space-y-8">
+            <div class="group flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm contact-card">
+              <div class="h-12 w-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-1">Email ID</h4>
+                <a href="mailto:shuvajit@iitj.ac.in" class="text-xl font-bold text-blue-600 hover:underline">shuvajit@iitj.ac.in</a>
+              </div>
+            </div>
+
+            <div class="group flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm contact-card">
+              <div class="h-12 w-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-1">Office Location</h4>
+                <p class="text-lg text-slate-700 leading-relaxed font-medium">
+                  Department of Civil and Infrastructure Engineering<br>
+                  Indian Institute of Technology Jodhpur<br>
+                  NH-62, Nagaur Road, Karwar<br>
+                  Jodhpur, Rajasthan, India - 342037
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-full min-h-[500px] relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
+        <iframe 
+          class="map-container absolute inset-0 w-full h-full"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.240406830588!2d73.11343357608882!3d26.47214717887303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394191d923985555%3A0x6b5e02c6301a2c3a!2sIndian%20Institute%20of%20Technology%20Jodhpur!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer class="bg-slate-950 text-slate-400 py-14">
+  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+    <div>
+      <h3 class="text-white font-bold text-lg">AMWM Laboratory</h3>
+      <p class="text-xs">Advanced Materials & Wave Mechanics</p>
+    </div>
+    <p class="text-xs">© 2026 AMWM Lab. Engineered for Research.</p>
+  </div>
+</footer>
+
+</body>
+</html>
