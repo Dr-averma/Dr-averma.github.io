@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>AMWM | Contact & Applications</title>
+    <title>AMWM | Contact Us</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -33,17 +33,6 @@
         .contact-card:hover {
             transform: translateY(-5px);
         }
-
-        /* File Upload Custom Area */
-        .upload-area {
-            border: 2px dashed #e2e8f0;
-            transition: all 0.3s ease;
-            background: #f8fafc;
-        }
-        .upload-area:hover {
-            border-color: #2563eb;
-            background: #f1f5f9;
-        }
     </style>
 </head>
 
@@ -71,7 +60,7 @@
         <div class="max-w-5xl mx-auto px-6 text-center">
             <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">Connect With Us</h1>
             <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                Reach out for research collaborations or apply for open positions by submitting your CV.
+                Reach out for research collaborations, academic inquiries, or to visit the AMWM Laboratory at IIT Jodhpur.
             </p>
         </div>
     </header>
@@ -83,7 +72,7 @@
                 <div class="lg:col-span-5 space-y-8">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
-                        <h2 class="text-3xl font-bold italic">Information</h2>
+                        <h2 class="text-3xl font-bold italic">Lab Address</h2>
                     </div>
 
                     <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 contact-card">
@@ -95,9 +84,9 @@
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 mb-2 uppercase text-xs tracking-widest">Address</h4>
-                                <p class="text-slate-600 leading-relaxed text-sm">
-                                    Dept. of Civil and Infrastructure Engineering<br>
+                                <h4 class="font-bold text-slate-900 mb-2">Location</h4>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Department of Civil and Infrastructure Engineering<br>
                                     Indian Institute of Technology Jodhpur<br>
                                     NH- 62, Nagaur Road, Karwar<br>
                                     Jodhpur, Rajasthan, India - 342037
@@ -114,8 +103,9 @@
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900 mb-2 uppercase text-xs tracking-widest">Direct Contact</h4>
+                                <h4 class="font-bold text-slate-900 mb-2">Email Inquiry</h4>
                                 <p class="text-blue-600 font-bold text-lg">shuvajit@iitj.ac.in</p>
+                                <p class="text-slate-400 text-sm mt-1">Direct response within 24-48 hours.</p>
                             </div>
                         </div>
                     </div>
@@ -123,64 +113,51 @@
 
                 <div class="lg:col-span-7">
                     <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-slate-100">
-                        <h2 class="text-2xl font-extrabold mb-8">Submission Portal</h2>
+                        <h2 class="text-2xl font-extrabold mb-8 flex items-center gap-3">
+                            Send us a Message
+                            <span class="h-1.5 w-1.5 bg-blue-600 rounded-full"></span>
+                        </h2>
 
-                        <form action="https://formspree.io/f/mwvqvzgd" method="POST" enctype="multipart/form-data" class="space-y-6">
-                            
+                        <form action="https://formspree.io/f/mwvqvzgd" method="POST" class="space-y-6">
                             <div class="grid md:grid-cols-2 gap-6">
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Name</label>
-                                    <input type="text" name="name" required placeholder="Full Name"
+                                    <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Name</label>
+                                    <input type="text" name="name" required placeholder="Your Name"
                                         class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50">
                                 </div>
                                 <div>
-                                    <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Mobile Number</label>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Mobile Number</label>
                                     <input type="tel" name="phone" required placeholder="+91 00000 00000"
                                         class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50">
                                 </div>
                             </div>
 
                             <div>
-                                <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Email Address</label>
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Email Address</label>
                                 <input type="email" name="email" required placeholder="email@address.com"
                                     class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50">
                             </div>
 
                             <div>
-                                <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Reason to Connect</label>
-                                <select name="reason" required class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50">
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Reason to Connect</label>
+                                <select name="reason" required class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50 appearance-none">
                                     <option value="" disabled selected>Select an option</option>
                                     <option value="Research Collaboration">Research Collaboration</option>
-                                    <option value="PhD Inquiry (CV Attached)">PhD Inquiry (CV Attached)</option>
-                                    <option value="M.Tech/Project Inquiry">M.Tech/Project Inquiry</option>
+                                    <option value="PhD/M.Tech Inquiry">PhD/M.Tech Inquiry</option>
+                                    <option value="Conference/Speaking">Conference/Speaking</option>
                                     <option value="General Query">General Query</option>
                                 </select>
                             </div>
 
                             <div>
-                                <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Upload CV / Document (PDF, Max 25MB)</label>
-                                <div class="upload-area relative rounded-2xl p-6 text-center">
-                                    <input type="file" name="attachment" id="cv-upload" accept=".pdf,.doc,.docx"
-                                        class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
-                                    <div class="flex flex-col items-center">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-400 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                                        </svg>
-                                        <p class="text-sm font-medium text-slate-600" id="file-label">Click to upload your CV</p>
-                                        <p class="text-xs text-slate-400 mt-1">PDF or Word files only</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block text-xs font-bold text-slate-500 mb-2 uppercase tracking-wide">Message Details</label>
-                                <textarea name="message" rows="4" required placeholder="Briefly describe your interest..."
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Message Details</label>
+                                <textarea name="message" rows="5" required placeholder="How can we help you?"
                                     class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50"></textarea>
                             </div>
 
                             <button type="submit" 
-                                class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-5 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg">
-                                Submit Inquiry
+                                class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-5 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg active:scale-[0.98]">
+                                Send Message
                             </button>
                         </form>
                     </div>
@@ -199,19 +176,6 @@
             <p class="text-xs">© 2026 AMWM Lab | IIT Jodhpur. All Rights Reserved.</p>
         </div>
     </footer>
-
-    <script>
-        // Update the file name label when a user selects a file
-        const fileInput = document.getElementById('cv-upload');
-        const fileLabel = document.getElementById('file-label');
-
-        fileInput.addEventListener('change', function() {
-            if (this.files && this.files.length > 0) {
-                fileLabel.textContent = "Selected: " + this.files[0].name;
-                fileLabel.style.color = "#2563eb"; // Blue color to confirm selection
-            }
-        });
-    </script>
 
 </body>
 </html>
