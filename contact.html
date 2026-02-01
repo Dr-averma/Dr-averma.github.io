@@ -1,140 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>AMWM | Contact</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AMWM | Contact Us</title>
 
-<script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-body { font-family: 'Inter', sans-serif; }
+    <style>
+        body { font-family: 'Inter', sans-serif; }
 
-.hero-gradient {
-  background: radial-gradient(circle at top, #064e3b 0%, #020617 65%);
-}
+        .hero-gradient {
+            background: radial-gradient(circle at top, #064e3b 0%, #020617 65%);
+        }
 
-.contact-card {
-  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
+        .form-input {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
 
-.contact-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
-}
+        .form-input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+            outline: none;
+        }
 
-.map-container {
-  filter: grayscale(100%) invert(90%) contrast(90%);
-  transition: filter 0.5s ease;
-}
+        .contact-card {
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
 
-.map-container:hover {
-  filter: grayscale(0%) invert(0%) contrast(100%);
-}
-</style>
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+    </style>
 </head>
 
-<body class="bg-white text-slate-800">
+<body class="bg-slate-50 text-slate-800">
 
-<nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-slate-100">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <img src="assets/logo_AMWM.png" alt="AMWM Logo" class="h-11">
-      <span class="font-extrabold text-xl tracking-tight">AMWM</span>
-    </div>
-
-    <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide">
-      <a href="index.html" class="hover:text-blue-600 transition">Home</a>
-      <a href="research.html" class="hover:text-blue-600 transition">Research</a>
-      <a href="publications.html" class="hover:text-blue-600 transition">Publications</a>
-      <a href="team.html" class="hover:text-blue-600 transition">Team</a>
-      <a href="facilities.html" class="hover:text-blue-600 transition">Facilities</a>
-      <a href="contact.html" class="text-blue-600">Contact</a>
-    </div>
-  </div>
-</nav>
-
-<header class="hero-gradient py-28 text-white">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
-      Get in Touch
-    </h1>
-    <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-      Have questions about our research or interested in collaboration? We’d love to hear from you.
-    </p>
-  </div>
-</header>
-
-<main class="bg-slate-50 py-24">
-  <div class="max-w-7xl mx-auto px-6">
-    
-    <div class="grid lg:grid-cols-2 gap-16 items-start">
-      
-      <div class="space-y-12">
-        <div>
-          <div class="flex items-center gap-4 mb-8">
-            <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
-            <h2 class="text-3xl font-bold">Contact Details</h2>
-          </div>
-          
-          <div class="space-y-8">
-            <div class="group flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm contact-card">
-              <div class="h-12 w-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-1">Email ID</h4>
-                <a href="mailto:shuvajit@iitj.ac.in" class="text-xl font-bold text-blue-600 hover:underline">shuvajit@iitj.ac.in</a>
-              </div>
+    <nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="assets/logo_AMWM.png" alt="AMWM Logo" class="h-11">
+                <span class="font-extrabold text-xl tracking-tight">AMWM</span>
             </div>
 
-            <div class="group flex gap-6 p-6 bg-white rounded-2xl border border-slate-100 shadow-sm contact-card">
-              <div class="h-12 w-12 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <div>
-                <h4 class="text-sm font-bold uppercase tracking-wider text-slate-400 mb-1">Office Location</h4>
-                <p class="text-lg text-slate-700 leading-relaxed font-medium">
-                  Department of Civil and Infrastructure Engineering<br>
-                  Indian Institute of Technology Jodhpur<br>
-                  NH-62, Nagaur Road, Karwar<br>
-                  Jodhpur, Rajasthan, India - 342037
-                </p>
-              </div>
+            <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide">
+                <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+                <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+                <a href="publications.html" class="hover:text-blue-600 transition">Publications</a>
+                <a href="team.html" class="hover:text-blue-600 transition">Team</a>
+                <a href="facilities.html" class="hover:text-blue-600 transition">Facilities</a>
+                <a href="contact.html" class="text-blue-600">Contact</a>
             </div>
-          </div>
         </div>
-      </div>
+    </nav>
 
-      <div class="h-full min-h-[500px] relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white">
-        <iframe 
-          class="map-container absolute inset-0 w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3571.240406830588!2d73.11343357608882!3d26.47214717887303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x394191d923985555%3A0x6b5e02c6301a2c3a!2sIndian%20Institute%20of%20Technology%20Jodhpur!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-          style="border:0;" 
-          allowfullscreen="" 
-          loading="lazy">
-        </iframe>
-      </div>
+    <header class="hero-gradient py-24 text-white">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">Connect With Us</h1>
+            <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                Reach out for research collaborations, academic inquiries, or to visit the AMWM Laboratory at IIT Jodhpur.
+            </p>
+        </div>
+    </header>
 
-    </div>
-  </div>
-</main>
+    <main class="py-20">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-16">
+                
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
+                        <h2 class="text-3xl font-bold italic">Lab Address</h2>
+                    </div>
 
-<footer class="bg-slate-950 text-slate-400 py-14">
-  <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-    <div>
-      <h3 class="text-white font-bold text-lg">AMWM Laboratory</h3>
-      <p class="text-xs">Advanced Materials & Wave Mechanics</p>
-    </div>
-    <p class="text-xs">© 2026 AMWM Lab. Engineered for Research.</p>
-  </div>
-</footer>
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 contact-card">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-2">Location</h4>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Department of Civil and Infrastructure Engineering<br>
+                                    Indian Institute of Technology Jodhpur<br>
+                                    NH- 62, Nagaur Road, Karwar<br>
+                                    Jodhpur, Rajasthan, India - 342037
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 contact-card">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-emerald-50 text-emerald-600 rounded-xl">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-2">Email Inquiry</h4>
+                                <p class="text-blue-600 font-bold text-lg">shuvajit@iitj.ac.in</p>
+                                <p class="text-slate-400 text-sm mt-1">Direct response within 24-48 hours.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-8 md:p-12 rounded-[2rem] shadow-xl border border-slate-100">
+                        <h2 class="text-2xl font-extrabold mb-8 flex items-center gap-3">
+                            Send us a Message
+                            <span class="h-1.5 w-1.5 bg-blue-600 rounded-full"></span>
+                        </h2>
+
+                        <form action="https://formspree.io/f/mwvqvzgd" method="POST" class="space-y-6">
+                            <div class="grid md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Name</label>
+                                    <input type="text" name="name" required placeholder="Your Name"
+                                        class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Mobile Number</label>
+                                    <input type="tel" name="phone" required placeholder="+91 00000 00000"
+                                        class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Email Address</label>
+                                <input type="email" name="email" required placeholder="email@address.com"
+                                    class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Reason to Connect</label>
+                                <select name="reason" required class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50 appearance-none">
+                                    <option value="" disabled selected>Select an option</option>
+                                    <option value="Research Collaboration">Research Collaboration</option>
+                                    <option value="PhD/M.Tech Inquiry">PhD/M.Tech Inquiry</option>
+                                    <option value="Conference/Speaking">Conference/Speaking</option>
+                                    <option value="General Query">General Query</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2 uppercase tracking-wide">Message Details</label>
+                                <textarea name="message" rows="5" required placeholder="How can we help you?"
+                                    class="form-input w-full px-5 py-4 rounded-2xl bg-slate-50"></textarea>
+                            </div>
+
+                            <button type="submit" 
+                                class="w-full bg-slate-900 hover:bg-blue-600 text-white font-bold py-5 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg active:scale-[0.98]">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-950 text-slate-400 py-14">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <h3 class="text-white font-bold text-lg">AMWM Laboratory</h3>
+                <p class="text-xs uppercase tracking-widest">Advanced Materials & Wave Mechanics</p>
+            </div>
+            <p class="text-xs">© 2026 AMWM Lab | IIT Jodhpur. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
