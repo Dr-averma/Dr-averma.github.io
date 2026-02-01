@@ -1,45 +1,171 @@
-<section class="max-w-7xl mx-auto px-6 mb-24">
-  <div class="flex items-center gap-4 mb-6">
-    <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
-    <h2 class="text-3xl font-bold italic">Visitors Around the World</h2>
-  </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AMWM | Facilities</title>
 
-  <div class="rounded-xl shadow-lg overflow-hidden h-[500px]">
-    <div id="world-map" class="w-full h-full"></div>
-  </div>
-</section>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Leaflet JS + CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
 
-<script>
-  // Initialize the map
-  var map = L.map('world-map').setView([20, 0], 2); // Centered on world
+        .hero-gradient {
+            background: radial-gradient(circle at top, #064e3b 0%, #020617 65%);
+        }
 
-  // Add OpenStreetMap tiles
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors',
-    maxZoom: 5,
-  }).addTo(map);
+        .card-hover {
+            transition: all 0.4s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
 
-  // Example visitor locations
-  var visitors = [
-    {lat: 28.6139, lon: 77.2090, city: "New Delhi, India"},
-    {lat: 40.7128, lon: -74.0060, city: "New York, USA"},
-    {lat: 51.5074, lon: -0.1278, city: "London, UK"},
-    {lat: 35.6895, lon: 139.6917, city: "Tokyo, Japan"}
-  ];
+        .software-grid img {
+            transition: transform 0.3s ease;
+            filter: grayscale(20%);
+        }
+        .software-grid div:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+    </style>
+</head>
 
-  // Add markers
-  visitors.forEach(v => {
-    L.circleMarker([v.lat, v.lon], {
-      radius: 6,
-      fillColor: "#3b82f6",
-      color: "#1e40af",
-      weight: 1,
-      opacity: 1,
-      fillOpacity: 0.7
-    }).addTo(map).bindPopup(v.city);
-  });
-</script>
+<body class="bg-white text-slate-800">
+
+<nav class="sticky top-0 z-50 bg-white/70 backdrop-blur-xl border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <img src="assets/logo_AMWM.png" alt="AMWM Logo" class="h-11">
+            <span class="font-extrabold text-xl tracking-tight">AMWM</span>
+        </div>
+
+        <div class="hidden md:flex space-x-8 text-sm font-semibold uppercase tracking-wide">
+            <a href="index.html" class="hover:text-blue-600 transition">Home</a>
+            <a href="research.html" class="hover:text-blue-600 transition">Research</a>
+            <a href="publications.html" class="hover:text-blue-600 transition">Publications</a>
+            <a href="team.html" class="hover:text-blue-600 transition">Team</a>
+            <a href="facilities.html" class="text-blue-600">Facilities</a>
+            <a href="contact.html" class="hover:text-blue-600 transition">Contact</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-gradient py-28 text-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight">
+            Our Facilities
+        </h1>
+        <p class="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+            Equipped with high-performance computing clusters and industry-standard simulation 
+            software to push the boundaries of computational mechanics.
+        </p>
+    </div>
+</header>
+
+<main class="bg-slate-50 py-20">
+
+    <section class="max-w-7xl mx-auto px-6 mb-24">
+        <div class="flex items-center gap-4 mb-12">
+            <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
+            <h2 class="text-3xl font-bold italic">Computational Workstations</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover">
+                <div class="h-56 bg-slate-200 overflow-hidden">
+                    <img src="assets/dell_3680_1.jpg" alt="Dell Precision 3680" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-blue-700 mb-4">Dell Precision 3680</h3>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li><strong class="text-slate-900">CPU:</strong> Intel® Core™ i7-14700 (14th Gen)</li>
+                        <li><strong class="text-slate-900">RAM:</strong> 64 GB DDR5 (4400 MT/s)</li>
+                        <li><strong class="text-slate-900">Storage:</strong> 2 TB NVMe SSD</li>
+                        <li><strong class="text-slate-900">GPU:</strong> NVIDIA RTX A400 (4 GB)</li>
+                        <li><strong class="text-slate-900">OS:</strong> Windows 11 Pro (64-bit)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover">
+                <div class="h-56 bg-slate-200 overflow-hidden">
+                    <img src="assets/dell_3680_2.jpg" alt="Dell Precision 3680" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-blue-700 mb-4">Dell Precision 3680</h3>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li><strong class="text-slate-900">CPU:</strong> Intel® Core™ i7-14700 (14th Gen)</li>
+                        <li><strong class="text-slate-900">RAM:</strong> 64 GB DDR5 (4400 MT/s)</li>
+                        <li><strong class="text-slate-900">Storage:</strong> 2 TB NVMe SSD</li>
+                        <li><strong class="text-slate-900">GPU:</strong> NVIDIA RTX A400 (4 GB)</li>
+                        <li><strong class="text-slate-900">OS:</strong> Windows 11 Pro (64-bit)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden card-hover">
+                <div class="h-56 bg-slate-200 overflow-hidden">
+                    <img src="assets/acer_veriton.jpg" alt="Acer Veriton" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-blue-700 mb-4">Acer Veriton M4690G</h3>
+                    <ul class="space-y-3 text-sm text-slate-600">
+                        <li><strong class="text-slate-900">CPU:</strong> Intel® Core™ i5-12400 (12th Gen)</li>
+                        <li><strong class="text-slate-900">RAM:</strong> 16 GB</li>
+                        <li><strong class="text-slate-900">Storage:</strong> 1.18 TB</li>
+                        <li><strong class="text-slate-900">GPU:</strong> Intel® UHD Graphics 730</li>
+                        <li><strong class="text-slate-900">OS:</strong> Windows 11 Pro (64-bit)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto px-6">
+        <div class="flex items-center gap-4 mb-12">
+            <div class="h-10 w-1.5 bg-blue-600 rounded-full"></div>
+            <h2 class="text-3xl font-bold italic">Software Stack</h2>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-10 items-center software-grid">
+            <div class="flex flex-col items-center gap-4">
+                <img src="assets/matlab_logo.png" alt="MATLAB" class="h-20 md:h-24 object-contain">
+                <span class="text-sm font-semibold text-slate-500 uppercase">MATLAB</span>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <img src="assets/comsol_logo.png" alt="COMSOL" class="h-20 md:h-24 object-contain">
+                <span class="text-sm font-semibold text-slate-500 uppercase text-center">COMSOL Multiphysics</span>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <img src="assets/python_logo.png" alt="Python" class="h-20 md:h-24 object-contain">
+                <span class="text-sm font-semibold text-slate-500 uppercase">Python</span>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <img src="assets/fenics_logo.png" alt="FEniCS" class="h-20 md:h-24 object-contain">
+                <span class="text-sm font-semibold text-slate-500 uppercase">FEniCS</span>
+            </div>
+            <div class="flex flex-col items-center gap-4">
+                <img src="assets/gmsh_logo.png" alt="Gmsh" class="h-20 md:h-24 object-contain">
+                <span class="text-sm font-semibold text-slate-500 uppercase">Gmsh</span>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-slate-950 text-slate-400 py-14">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+        <div>
+            <h3 class="text-white font-bold text-lg">AMWM Laboratory</h3>
+            <p class="text-xs">Advanced Materials & Wave Mechanics</p>
+        </div>
+        <p class="text-xs">© 2026 AMWM Lab. Engineered for Research.</p>
+    </div>
+</footer>
+
+</body>
+</html>
