@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>AMWM | Research Focus</title>
 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+
+        .hero-gradient {
+            background: radial-gradient(circle at top right, #1e3a8a 0%, #020617 70%);
+        }
+
+        .research-card {
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .research-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .number-tag {
+            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+            color: transparent;
+            font-size: 8rem;
+            line-height: 1;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-950 text-slate-200">
+
+<nav class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="h-8 w-8 bg-blue-600 rounded-lg flex items-center justify-center font-bold text-white">A</div>
+            <span class="font-extrabold text-xl tracking-tight text-white">AMWM</span>
+        </div>
+        <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-slate-400">
+            <a href="index.html" class="hover:text-blue-500 transition">Home</a>
+            <a href="research.html" class="text-blue-500">Research</a>
+            <a href="team.html" class="hover:text-blue-500 transition">Team</a>
+            <a href="facilities.html" class="hover:text-blue-500 transition">Facilities</a>
+        </div>
+    </div>
+</nav>
+
+<header class="hero-gradient pt-32 pb-20 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+        <h1 class="text-6xl md:text-8xl font-extrabold mb-8 tracking-tighter text-white">
+            Research <span class="text-blue-600">Frontiers.</span>
+        </h1>
+        <p class="text-slate-400 text-xl max-w-2xl leading-relaxed font-light">
+            We operate at the intersection of geometry and physics, engineering the next generation of 
+            architected solids and wave-controlling structures.
+        </p>
+    </div>
+</header>
+
+<main class="py-24">
+    <div class="max-w-7xl mx-auto px-6 space-y-32">
+
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <span class="number-tag absolute -top-10 -left-4 font-black">01</span>
+                <div class="relative z-10 pl-4">
+                    <h2 class="text-4xl font-bold mb-6 text-white">Metamaterials</h2>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        We design architected materials with properties not found in nature. By manipulating the 
+                        <strong>micro-scale topology</strong>, we create solids with negative Poisson's ratios, 
+                        programmable stiffness, and extreme energy absorption capabilities.
+                    </p>
+                    <ul class="flex flex-wrap gap-3 text-xs font-bold text-blue-400">
+                        <li class="px-3 py-1 rounded-full border border-blue-900 bg-blue-900/20">Auxetic Structures</li>
+                        <li class="px-3 py-1 rounded-full border border-blue-900 bg-blue-900/20">Topological Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="research-card glass-effect rounded-3xl p-4 overflow-hidden">
+                <div class="h-80 bg-slate-900 rounded-2xl flex items-center justify-center border border-white/5">
+                    <span class="text-slate-700 font-mono">[Structural Lattice Visualization]</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 research-card glass-effect rounded-3xl p-4">
+                <div class="h-80 bg-slate-900 rounded-2xl flex items-center justify-center border border-white/5">
+                     <span class="text-slate-700 font-mono">[Bandgap Frequency Analysis]</span>
+                </div>
+            </div>
+            <div class="relative order-1 md:order-2">
+                <span class="number-tag absolute -top-10 -left-4 font-black">02</span>
+                <div class="relative z-10 pl-4">
+                    <h2 class="text-4xl font-bold mb-6 text-white">Wave Propagation</h2>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Investigating how elastic waves travel through periodic media. Our focus lies in 
+                        <strong>Bandgap Engineering</strong>—creating frequency filters that can effectively 
+                        block or redirect vibrations and acoustic energy for seismic protection and stealth.
+                    </p>
+                    <ul class="flex flex-wrap gap-3 text-xs font-bold text-blue-400">
+                        <li class="px-3 py-1 rounded-full border border-blue-900 bg-blue-900/20">Phononic Crystals</li>
+                        <li class="px-3 py-1 rounded-full border border-blue-900 bg-blue-900/20">Vibration Isolation</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <span class="number-tag absolute -top-10 -left-4 font-black">03</span>
+                <div class="relative z-10 pl-4">
+                    <h2 class="text-4xl font-bold mb-6 text-white">Sandwich Composites</h2>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Developing high-strength, low-weight hybrid structures. We explore core architectures 
+                        that maximize structural integrity while providing multifunctional benefits like thermal 
+                        insulation and impact resistance.
+                    </p>
+                    <ul class="flex flex-wrap gap-3 text-xs font-bold text-blue-400">
+                        <li class="px-3 py-1 rounded-full border border-blue-900 bg-blue-900/20">Honeycomb Cores</li>
+                        <li class="px-3 py-1 rounded-full border border-blue-900 bg-blue-900/20">Debonding Analysis</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="research-card glass-effect rounded-3xl p-4">
+                <div class="h-80 bg-slate-900 rounded-2xl flex items-center justify-center border border-white/5">
+                    <span class="text-slate-700 font-mono">[Composite Layering Model]</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1 research-card glass-effect rounded-3xl p-4">
+                <div class="h-80 bg-slate-900 rounded-2xl flex items-center justify-center border border-white/5">
+                    <span class="text-slate-700 font-mono">[FEA Mesh Simulation]</span>
+                </div>
+            </div>
+            <div class="relative order-1 md:order-2">
+                <span class="number-tag absolute -top-10 -left-4 font-black">04</span>
+                <div class="relative z-10 pl-4">
+                    <h2 class="text-4xl font-bold mb-6 text-white">Computational Mechanics</h2>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Utilizing advanced Finite Element Analysis (FEA) and custom Julia-based solvers (Gridap.jl) 
+                        to simulate complex non-linear behaviors. We bridge the gap between theoretical 
+                        mathematics and physical reality through high-fidelity modeling.
+                    </p>
+                    <ul class="flex flex-wrap gap-3 text-xs font-bold text-blue-400">
+                        <li class="px-3 py-1 rounded-full border border-blue-900 bg-blue-900/20">Julia Computing</li>
+                        <li class="px-3 py-1 rounded-full border border-blue-900 bg-blue-900/20">Non-linear FEM</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<footer class="bg-black border-t border-white/5 py-20 text-slate-500">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+        <p class="text-sm tracking-widest uppercase mb-4">AMWM Research Laboratory</p>
+        <p class="text-xs">© 2026 Advanced Materials & Wave Mechanics Lab. All Rights Reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
