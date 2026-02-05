@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>3D PyGmsh Tutorial: Parametric Unit Cell Generation</title>
+
+  <!-- Styling -->
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      margin: 40px;
+      max-width: 1000px;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 15px;
+      overflow-x: auto;
+      border-left: 4px solid #3498db;
+    }
+    code {
+      font-family: Consolas, monospace;
+      font-size: 0.95em;
+    }
+    .note {
+      background: #eaf2f8;
+      padding: 12px;
+      border-left: 4px solid #2980b9;
+      margin: 20px 0;
+    }
+    .warning {
+      background: #fdecea;
+      padding: 12px;
+      border-left: 4px solid #c0392b;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>3D PyGmsh Tutorial: Curved Unit Cell Generation</h1>
+
+<p>
+This tutorial demonstrates how to generate a <b>3D parametric unit cell</b>
+using <b>PyGmsh / Gmsh OCC</b>, starting from Bezier-defined ligaments,
+adding thickness, trimming intersections, and finally extruding to 3D.
+</p>
+
+<hr>
+
+<h2>1. Geometry Overview</h2>
+
+<p>
+The unit cell consists of curved ligaments defined in 2D using Bezier curves.
+Thickness is introduced via offset curves, intersections are trimmed, and
+the final surface is extruded to obtain a 3D solid.
+</p>
+
+<div class="note">
+<b>Key idea:</b> The geometry is constructed entirely using the Gmsh OCC kernel,
+which allows Boolean operations and robust extrusion.
+</div>
+
+<h2>2. Parameters and Physical Meaning</h2>
+
+<pre><code>
+L = 0.125            # Unit cell length
+thickness_ratio = 15
+t = L / thickness_ratio
+lc = t / 8           # Characteristic mesh size
+depth = L / 15       # Extrusion depth
+Cell_theta = 30      # Cell angle (degrees)
+</code></pre>
+
+<p>
+The mesh size <code>lc</code> is directly linked to the ligament thickness,
+ensuring consistent resolution across the geometry.
+</p>
+
+<h2>3. Bezier Curve Construction</h2>
+
+<p>
+Ligament centerlines are generated using Bernstein polynomials:
+</p>
+
+<pre><code>
+P = np.column_stack((Control_ptX, Control_ptY, np.zeros(len(Control_ptX))))
+u_vals = np.linspace(0.0, 1.0, div + 1)
+lv = np.array([
+    [sigma[i] * ((1.0 - u)**(n - 1 - i)) * (u**i) for i in range(n)]
+    for u in u_vals
+])
+Pxy = lv @ P[:, 0:2]
+</code></pre>
+
+<h2>4. Thickness via Offset Curves</h2>
+
+<p>
+Thickness is introduced by offsetting the centerline curves along their normals:
+</p>
+
+<pre><code>
+xy_p, xy_n = offset_curve2D(xy, t * 0.5)
+</code></pre>
+
+<div class="warning">
+Offset curves may self-intersect. Intersection detection and trimming
+are mandatory for a valid surface.
+</div>
+
+<h2>5. Gmsh Geometry Creation</h2>
+
+<pre><code>
+gmsh.initialize()
+gmsh.model.add("UnitCell_TriangularWalls")
+gmsh.option.setNumber("Mesh.CharacteristicLengthMin", lc)
+gmsh.option.setNumber("Mesh.CharacteristicLengthMax", 4*lc)
+</code></pre>
+
+<h2>6. Surface Construction and Boolean Intersection</h2>
+
+<p>
+The ligament surface is intersected with a bounding polygon to ensure
+a periodic unit cell:
+</p>
+
+<pre><code>
+res = gmsh.model.occ.intersect(
+    [(2, surf1)], [(2, surf2)],
+    removeObject=True, removeTool=True
+)
+</code></pre>
+
+<h2>7. 3D Extrusion</h2>
+
+<pre><code>
+ext = gmsh.model.occ.extrude(
+    [(2, s) for s in valid_surfs],
+    0, 0, depth
+)
+</code></pre>
+
+<h2>8. Mesh Generation</h2>
+
+<pre><code>
+gmsh.option.setNumber("Mesh.Algorithm3D", 1)
+gmsh.model.mesh.generate(3)
+gmsh.write("unit_cell_3D.msh")
+</code></pre>
+
+<h2>9. Visualization</h2>
+
+<pre><code>
+gmsh.fltk.run()
+gmsh.finalize()
+</code></pre>
+
+<hr>
+
+<h2>Common Pitfalls</h2>
+
+<ul>
+  <li>Missing global mesh size → empty volume mesh</li>
+  <li>Incorrect curve orientation → surface creation failure</li>
+  <li>Untrimmed offsets → self-intersecting surfaces</li>
+</ul>
+
+</body>
+</html>
